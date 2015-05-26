@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ito-VC-MJY">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="f9Y-tZ-2wj">
+            <objects>
+                <viewController id="TAC-72-hvr" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6He-dg-wOB"/>
+                        <viewControllerLayoutGuide type="bottom" id="3pe-c3-KjX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MeZ-UA-1jp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lena bmp 标准测试图像.bmp" translatesAutoresizingMaskIntoConstraints="NO" id="Fp3-Hb-yGW">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="9mn-cZ-OA8"/>
+                                    <constraint firstAttribute="width" constant="200" id="ftv-v9-hzs"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Fp3-Hb-yGW" secondAttribute="centerX" id="V3t-k2-ktn"/>
+                            <constraint firstAttribute="centerY" secondItem="Fp3-Hb-yGW" secondAttribute="centerY" id="lwq-AU-6jd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tbm-AS-uQo">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="WJu-tT-8bk">
+                            <connections>
+                                <action selector="actionClicked:" destination="TAC-72-hvr" id="pRi-6h-HGy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="sampleView" destination="Fp3-Hb-yGW" id="HOP-tb-peG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jGR-NC-97J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="243" y="299"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="neV-pS-pJE">
+            <objects>
+                <navigationController id="Ito-VC-MJY" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fQ4-4Y-usu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TAC-72-hvr" kind="relationship" relationship="rootViewController" id="NK5-rh-sx2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KMA-sG-6XI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-594" y="299"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="lena bmp 标准测试图像.bmp" width="512" height="512"/>
+    </resources>
+</document>
