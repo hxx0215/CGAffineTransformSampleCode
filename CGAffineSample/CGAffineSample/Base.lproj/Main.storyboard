@@ -23,14 +23,28 @@
                                     <constraint firstAttribute="width" constant="200" id="ftv-v9-hzs"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ta.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hus-D4-Udw">
+                                <rect key="frame" x="100" y="100" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="8te-Xy-11f"/>
+                                    <constraint firstAttribute="height" constant="200" id="XLp-oF-JHE"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Hus-D4-Udw" secondAttribute="centerX" constant="100" id="DYY-BK-7uZ"/>
                             <constraint firstAttribute="centerX" secondItem="Fp3-Hb-yGW" secondAttribute="centerX" id="V3t-k2-ktn"/>
+                            <constraint firstAttribute="centerY" secondItem="Hus-D4-Udw" secondAttribute="centerY" constant="100" id="gRd-sz-yVI"/>
                             <constraint firstAttribute="centerY" secondItem="Fp3-Hb-yGW" secondAttribute="centerY" id="lwq-AU-6jd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tbm-AS-uQo">
+                        <barButtonItem key="leftBarButtonItem" systemItem="compose" id="9yS-LI-Iez">
+                            <connections>
+                                <action selector="comClicked:" destination="TAC-72-hvr" id="K6o-cW-EOD"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="WJu-tT-8bk">
                             <connections>
                                 <action selector="actionClicked:" destination="TAC-72-hvr" id="pRi-6h-HGy"/>
@@ -39,6 +53,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="sampleView" destination="Fp3-Hb-yGW" id="HOP-tb-peG"/>
+                        <outlet property="sampleView2" destination="Hus-D4-Udw" id="UVH-XU-G29"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jGR-NC-97J" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -64,5 +79,6 @@
     </scenes>
     <resources>
         <image name="lena bmp 标准测试图像.bmp" width="512" height="512"/>
+        <image name="ta.png" width="1022" height="768"/>
     </resources>
 </document>

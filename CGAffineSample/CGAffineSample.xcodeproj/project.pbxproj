@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B90947081B15F47A002E2A62 /* ta.png in Resources */ = {isa = PBXBuildFile; fileRef = B90947071B15F47A002E2A62 /* ta.png */; };
 		B99F4CA01B149DC80080FE6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B99F4C9F1B149DC80080FE6A /* main.m */; };
 		B99F4CA31B149DC80080FE6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B99F4CA21B149DC80080FE6A /* AppDelegate.m */; };
 		B99F4CA61B149DC80080FE6A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B99F4CA51B149DC80080FE6A /* ViewController.m */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B90947071B15F47A002E2A62 /* ta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ta.png; sourceTree = "<group>"; };
 		B99F4C9A1B149DC80080FE6A /* CGAffineSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGAffineSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B99F4C9E1B149DC80080FE6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B99F4C9F1B149DC80080FE6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				B99F4CAA1B149DC80080FE6A /* Images.xcassets */,
 				B99F4CAC1B149DC80080FE6A /* LaunchScreen.xib */,
 				B99F4CC31B14A5430080FE6A /* lena bmp 标准测试图像.bmp */,
+				B90947071B15F47A002E2A62 /* ta.png */,
 				B99F4C9D1B149DC80080FE6A /* Supporting Files */,
 			);
 			path = CGAffineSample;
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B99F4CA91B149DC80080FE6A /* Main.storyboard in Resources */,
+				B90947081B15F47A002E2A62 /* ta.png in Resources */,
 				B99F4CC41B14A5430080FE6A /* lena bmp 标准测试图像.bmp in Resources */,
 				B99F4CAE1B149DC80080FE6A /* LaunchScreen.xib in Resources */,
 				B99F4CAB1B149DC80080FE6A /* Images.xcassets in Resources */,
@@ -422,6 +426,7 @@
 				B99F4CBF1B149DC90080FE6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B99F4CC01B149DC90080FE6A /* Build configuration list for PBXNativeTarget "CGAffineSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +435,7 @@
 				B99F4CC21B149DC90080FE6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

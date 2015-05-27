@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *sampleView2;
 @property (weak, nonatomic) IBOutlet UIImageView *sampleView;
 @end
 
@@ -18,6 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor lightGrayColor];
+    self.sampleView2.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,5 +46,11 @@
     
 //    self.sampleView.transform = t;
 }
-
+- (IBAction)comClicked:(id)sender {
+    __unused CATransform3D t = CATransform3DIdentity;
+    self.sampleView2.hidden = YES;
+    t.m34 = 0.0005;
+    t = CATransform3DRotate(t, M_PI * 30 / 180.0, 1, 0, 0);
+    self.sampleView.layer.transform = t;
+}
 @end
