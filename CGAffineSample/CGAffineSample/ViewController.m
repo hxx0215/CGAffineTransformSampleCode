@@ -50,7 +50,7 @@
     __unused CATransform3D t = CATransform3DIdentity;
     self.sampleView2.hidden = YES;
     t.m34 = 0.0005;
-    t = CATransform3DRotate(t, M_PI * 30 / 180.0, 1, 0, 0);
+    t = CATransform3DRotate(t, M_PI * 30 / 180.0, 0, 0, 0);
     self.sampleView.layer.transform = t;
 }
 @end
