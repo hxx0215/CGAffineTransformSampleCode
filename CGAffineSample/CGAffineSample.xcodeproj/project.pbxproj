@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B90947081B15F47A002E2A62 /* ta.png in Resources */ = {isa = PBXBuildFile; fileRef = B90947071B15F47A002E2A62 /* ta.png */; };
+		B94E5A0E1B209A0300C7526B /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = B94E5A0D1B209A0300C7526B /* UIImage+ImageEffects.m */; };
+		B94E5A101B209A3C00C7526B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94E5A0F1B209A3C00C7526B /* Accelerate.framework */; };
 		B99F4CA01B149DC80080FE6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B99F4C9F1B149DC80080FE6A /* main.m */; };
 		B99F4CA31B149DC80080FE6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B99F4CA21B149DC80080FE6A /* AppDelegate.m */; };
 		B99F4CA61B149DC80080FE6A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B99F4CA51B149DC80080FE6A /* ViewController.m */; };
@@ -30,6 +32,9 @@
 
 /* Begin PBXFileReference section */
 		B90947071B15F47A002E2A62 /* ta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ta.png; sourceTree = "<group>"; };
+		B94E5A0C1B209A0300C7526B /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		B94E5A0D1B209A0300C7526B /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		B94E5A0F1B209A3C00C7526B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		B99F4C9A1B149DC80080FE6A /* CGAffineSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGAffineSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B99F4C9E1B149DC80080FE6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B99F4C9F1B149DC80080FE6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -51,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B94E5A101B209A3C00C7526B /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +73,7 @@
 		B99F4C911B149DC80080FE6A = {
 			isa = PBXGroup;
 			children = (
+				B94E5A0F1B209A3C00C7526B /* Accelerate.framework */,
 				B99F4C9C1B149DC80080FE6A /* CGAffineSample */,
 				B99F4CB61B149DC90080FE6A /* CGAffineSampleTests */,
 				B99F4C9B1B149DC80080FE6A /* Products */,
@@ -89,6 +96,8 @@
 				B99F4CA21B149DC80080FE6A /* AppDelegate.m */,
 				B99F4CA41B149DC80080FE6A /* ViewController.h */,
 				B99F4CA51B149DC80080FE6A /* ViewController.m */,
+				B94E5A0C1B209A0300C7526B /* UIImage+ImageEffects.h */,
+				B94E5A0D1B209A0300C7526B /* UIImage+ImageEffects.m */,
 				B99F4CA71B149DC80080FE6A /* Main.storyboard */,
 				B99F4CAA1B149DC80080FE6A /* Images.xcassets */,
 				B99F4CAC1B149DC80080FE6A /* LaunchScreen.xib */,
@@ -227,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B94E5A0E1B209A0300C7526B /* UIImage+ImageEffects.m in Sources */,
 				B99F4CA61B149DC80080FE6A /* ViewController.m in Sources */,
 				B99F4CA31B149DC80080FE6A /* AppDelegate.m in Sources */,
 				B99F4CA01B149DC80080FE6A /* main.m in Sources */,

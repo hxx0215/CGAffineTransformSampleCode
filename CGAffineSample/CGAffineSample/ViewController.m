@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIImage+ImageEffects.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *sampleView2;
@@ -43,7 +44,19 @@
 //    self.sampleView.transform = CGAffineTransformConcat(t1, t2);//先做t1变换再做t2变换
     
     
-    
+    CALayer *layer = [CALayer layer];
+    layer.frame = CGRectMake(0, 0, 300, 300);
+    [self.view.layer addSublayer:layer];
+    CGFloat scale = [UIScreen mainScreen].scale;
+    UIGraphicsBeginImageContextWithOptions(self.view.frame.size, YES, scale);
+    [self.view drawViewHierarchyInRect:self.view.frame afterScreenUpdates:NO];
+    __block UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    CGRect frame = layer.frame;
+    CGImageRef imageRef = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(frame.origin.x * scale, frame.origin.y * scale, frame.size.width * scale, frame.size.height * scale));
+    image = [UIImage imageWithCGImage:imageRef];
+    image = [image applyBlurWithRadius:50.0f tintColor:[UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:0.1] saturationDeltaFactor:2 maskImage:nil];
+    layer.contents = (__bridge id)(image.CGImage);
 //    self.sampleView.transform = t;
 }
 - (IBAction)comClicked:(id)sender {
