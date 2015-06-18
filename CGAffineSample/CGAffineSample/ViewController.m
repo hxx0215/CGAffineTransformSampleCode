@@ -8,14 +8,15 @@
 
 #import "ViewController.h"
 #import "UIImage+ImageEffects.h"
+#import <objc/runtime.h>
 
-@interface ViewController ()
+@interface ViewController ()<UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *sampleView2;
 @property (weak, nonatomic) IBOutlet UIImageView *sampleView;
 @end
 
 @implementation ViewController
-
+static char emailAddressKey;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -58,6 +59,9 @@
     image = [image applyBlurWithRadius:50.0f tintColor:[UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:0.1] saturationDeltaFactor:2 maskImage:nil];
     layer.contents = (__bridge id)(image.CGImage);
 //    self.sampleView.transform = t;
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"message" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    objc_setAssociatedObject(alert, &emailAddressKey, @"value", OBJC_ASSOCIATION_COPY_NONATOMIC);
+    [alert show];
 }
 - (IBAction)comClicked:(id)sender {
     __unused CATransform3D t = CATransform3DIdentity;
@@ -65,5 +69,8 @@
     t.m34 = 0.0005;
     t = CATransform3DRotate(t, M_PI * 30 / 180.0, 0, 0, 0);
     self.sampleView.layer.transform = t;
+}
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex{
+    NSLog(@"%@",objc_getAssociatedObject(alertView, &emailAddressKey));
 }
 @end
