@@ -56,7 +56,7 @@ static char emailAddressKey;
     CGRect frame = layer.frame;
     CGImageRef imageRef = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(frame.origin.x * scale, frame.origin.y * scale, frame.size.width * scale, frame.size.height * scale));
     image = [UIImage imageWithCGImage:imageRef];
-    image = [image applyBlurWithRadius:50.0f tintColor:[UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:0.1] saturationDeltaFactor:2 maskImage:nil];
+    image = [image applyBlurWithRadius:50.0f tintColor:[UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:0.1] saturationDeltaFactor:3 maskImage:nil];
     layer.contents = (__bridge id)(image.CGImage);
 //    self.sampleView.transform = t;
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"message" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
